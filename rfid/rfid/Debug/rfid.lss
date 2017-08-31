@@ -1,0 +1,1063 @@
+
+rfid.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000102  00800100  000005be  00000652  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000005be  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000c  00800202  00800202  00000754  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000754  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 000000e0  00000000  00000000  00000784  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000121f  00000000  00000000  00000864  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000556  00000000  00000000  00001a83  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000008c1  00000000  00000000  00001fd9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000234  00000000  00000000  0000289c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000031d  00000000  00000000  00002ad0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000084f  00000000  00000000  00002ded  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000b0  00000000  00000000  0000363c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	12 e0       	ldi	r17, 0x02	; 2
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ee eb       	ldi	r30, 0xBE	; 190
+  a0:	f5 e0       	ldi	r31, 0x05	; 5
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 30       	cpi	r26, 0x02	; 2
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	22 e0       	ldi	r18, 0x02	; 2
+  b4:	a2 e0       	ldi	r26, 0x02	; 2
+  b6:	b2 e0       	ldi	r27, 0x02	; 2
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ae 30       	cpi	r26, 0x0E	; 14
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	ac d1       	rcall	.+856    	; 0x41c <main>
+  c4:	7a c2       	rjmp	.+1268   	; 0x5ba <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <flash_enable>:
+void send_integer(double numb)
+{
+	char b[10];
+	itoa(numb,b,10);
+	send_string(b);
+}
+  c8:	e2 e6       	ldi	r30, 0x62	; 98
+  ca:	f0 e0       	ldi	r31, 0x00	; 0
+  cc:	80 81       	ld	r24, Z
+  ce:	80 61       	ori	r24, 0x10	; 16
+  d0:	80 83       	st	Z, r24
+  d2:	00 00       	nop
+  d4:	00 00       	nop
+  d6:	80 81       	ld	r24, Z
+  d8:	8f 7e       	andi	r24, 0xEF	; 239
+  da:	80 83       	st	Z, r24
+  dc:	08 95       	ret
+
+000000de <lcd_busy>:
+  de:	17 ba       	out	0x17, r1	; 23
+  e0:	e2 e6       	ldi	r30, 0x62	; 98
+  e2:	f0 e0       	ldi	r31, 0x00	; 0
+  e4:	80 81       	ld	r24, Z
+  e6:	8b 7f       	andi	r24, 0xFB	; 251
+  e8:	80 83       	st	Z, r24
+  ea:	80 81       	ld	r24, Z
+  ec:	88 60       	ori	r24, 0x08	; 8
+  ee:	80 83       	st	Z, r24
+  f0:	c7 9b       	sbis	0x18, 7	; 24
+  f2:	03 c0       	rjmp	.+6      	; 0xfa <lcd_busy+0x1c>
+  f4:	e9 df       	rcall	.-46     	; 0xc8 <flash_enable>
+  f6:	c7 99       	sbic	0x18, 7	; 24
+  f8:	fd cf       	rjmp	.-6      	; 0xf4 <lcd_busy+0x16>
+  fa:	8f ef       	ldi	r24, 0xFF	; 255
+  fc:	87 bb       	out	0x17, r24	; 23
+  fe:	08 95       	ret
+
+00000100 <send_char>:
+ 100:	cf 93       	push	r28
+ 102:	c8 2f       	mov	r28, r24
+ 104:	ec df       	rcall	.-40     	; 0xde <lcd_busy>
+ 106:	c8 bb       	out	0x18, r28	; 24
+ 108:	e2 e6       	ldi	r30, 0x62	; 98
+ 10a:	f0 e0       	ldi	r31, 0x00	; 0
+ 10c:	80 81       	ld	r24, Z
+ 10e:	84 60       	ori	r24, 0x04	; 4
+ 110:	80 83       	st	Z, r24
+ 112:	80 81       	ld	r24, Z
+ 114:	87 7f       	andi	r24, 0xF7	; 247
+ 116:	80 83       	st	Z, r24
+ 118:	d7 df       	rcall	.-82     	; 0xc8 <flash_enable>
+ 11a:	18 ba       	out	0x18, r1	; 24
+ 11c:	8f e3       	ldi	r24, 0x3F	; 63
+ 11e:	96 e0       	ldi	r25, 0x06	; 6
+ 120:	01 97       	sbiw	r24, 0x01	; 1
+ 122:	f1 f7       	brne	.-4      	; 0x120 <send_char+0x20>
+ 124:	00 c0       	rjmp	.+0      	; 0x126 <send_char+0x26>
+ 126:	00 00       	nop
+ 128:	cf 91       	pop	r28
+ 12a:	08 95       	ret
+
+0000012c <send_command>:
+ 12c:	cf 93       	push	r28
+ 12e:	c8 2f       	mov	r28, r24
+ 130:	d6 df       	rcall	.-84     	; 0xde <lcd_busy>
+ 132:	c8 bb       	out	0x18, r28	; 24
+ 134:	e2 e6       	ldi	r30, 0x62	; 98
+ 136:	f0 e0       	ldi	r31, 0x00	; 0
+ 138:	80 81       	ld	r24, Z
+ 13a:	8b 7f       	andi	r24, 0xFB	; 251
+ 13c:	80 83       	st	Z, r24
+ 13e:	80 81       	ld	r24, Z
+ 140:	87 7f       	andi	r24, 0xF7	; 247
+ 142:	80 83       	st	Z, r24
+ 144:	c1 df       	rcall	.-126    	; 0xc8 <flash_enable>
+ 146:	18 ba       	out	0x18, r1	; 24
+ 148:	8f e3       	ldi	r24, 0x3F	; 63
+ 14a:	96 e0       	ldi	r25, 0x06	; 6
+ 14c:	01 97       	sbiw	r24, 0x01	; 1
+ 14e:	f1 f7       	brne	.-4      	; 0x14c <send_command+0x20>
+ 150:	00 c0       	rjmp	.+0      	; 0x152 <send_command+0x26>
+ 152:	00 00       	nop
+ 154:	cf 91       	pop	r28
+ 156:	08 95       	ret
+
+00000158 <send_string>:
+ 158:	cf 93       	push	r28
+ 15a:	df 93       	push	r29
+ 15c:	ec 01       	movw	r28, r24
+ 15e:	88 81       	ld	r24, Y
+ 160:	88 23       	and	r24, r24
+ 162:	29 f0       	breq	.+10     	; 0x16e <send_string+0x16>
+ 164:	21 96       	adiw	r28, 0x01	; 1
+ 166:	cc df       	rcall	.-104    	; 0x100 <send_char>
+ 168:	89 91       	ld	r24, Y+
+ 16a:	81 11       	cpse	r24, r1
+ 16c:	fc cf       	rjmp	.-8      	; 0x166 <send_string+0xe>
+ 16e:	df 91       	pop	r29
+ 170:	cf 91       	pop	r28
+ 172:	08 95       	ret
+
+00000174 <config_LCD>:
+ 174:	8f e2       	ldi	r24, 0x2F	; 47
+ 176:	95 e7       	ldi	r25, 0x75	; 117
+ 178:	01 97       	sbiw	r24, 0x01	; 1
+ 17a:	f1 f7       	brne	.-4      	; 0x178 <config_LCD+0x4>
+ 17c:	00 c0       	rjmp	.+0      	; 0x17e <config_LCD+0xa>
+ 17e:	00 00       	nop
+ 180:	e1 e6       	ldi	r30, 0x61	; 97
+ 182:	f0 e0       	ldi	r31, 0x00	; 0
+ 184:	80 81       	ld	r24, Z
+ 186:	8c 61       	ori	r24, 0x1C	; 28
+ 188:	80 83       	st	Z, r24
+ 18a:	9f ef       	ldi	r25, 0xFF	; 255
+ 18c:	20 e7       	ldi	r18, 0x70	; 112
+ 18e:	82 e0       	ldi	r24, 0x02	; 2
+ 190:	91 50       	subi	r25, 0x01	; 1
+ 192:	20 40       	sbci	r18, 0x00	; 0
+ 194:	80 40       	sbci	r24, 0x00	; 0
+ 196:	e1 f7       	brne	.-8      	; 0x190 <config_LCD+0x1c>
+ 198:	00 c0       	rjmp	.+0      	; 0x19a <config_LCD+0x26>
+ 19a:	00 00       	nop
+ 19c:	81 e0       	ldi	r24, 0x01	; 1
+ 19e:	c6 df       	rcall	.-116    	; 0x12c <send_command>
+ 1a0:	88 e3       	ldi	r24, 0x38	; 56
+ 1a2:	c4 df       	rcall	.-120    	; 0x12c <send_command>
+ 1a4:	8f e1       	ldi	r24, 0x1F	; 31
+ 1a6:	9e e4       	ldi	r25, 0x4E	; 78
+ 1a8:	01 97       	sbiw	r24, 0x01	; 1
+ 1aa:	f1 f7       	brne	.-4      	; 0x1a8 <config_LCD+0x34>
+ 1ac:	00 c0       	rjmp	.+0      	; 0x1ae <config_LCD+0x3a>
+ 1ae:	00 00       	nop
+ 1b0:	88 e3       	ldi	r24, 0x38	; 56
+ 1b2:	bc df       	rcall	.-136    	; 0x12c <send_command>
+ 1b4:	8f e1       	ldi	r24, 0x1F	; 31
+ 1b6:	9e e4       	ldi	r25, 0x4E	; 78
+ 1b8:	01 97       	sbiw	r24, 0x01	; 1
+ 1ba:	f1 f7       	brne	.-4      	; 0x1b8 <config_LCD+0x44>
+ 1bc:	00 c0       	rjmp	.+0      	; 0x1be <config_LCD+0x4a>
+ 1be:	00 00       	nop
+ 1c0:	88 e3       	ldi	r24, 0x38	; 56
+ 1c2:	b4 df       	rcall	.-152    	; 0x12c <send_command>
+ 1c4:	8f e1       	ldi	r24, 0x1F	; 31
+ 1c6:	9e e4       	ldi	r25, 0x4E	; 78
+ 1c8:	01 97       	sbiw	r24, 0x01	; 1
+ 1ca:	f1 f7       	brne	.-4      	; 0x1c8 <config_LCD+0x54>
+ 1cc:	00 c0       	rjmp	.+0      	; 0x1ce <config_LCD+0x5a>
+ 1ce:	00 00       	nop
+ 1d0:	8e e0       	ldi	r24, 0x0E	; 14
+ 1d2:	ac cf       	rjmp	.-168    	; 0x12c <send_command>
+ 1d4:	08 95       	ret
+
+000001d6 <goto_location>:
+
+void goto_location(int x,int y)
+{
+	if (y == 2)
+ 1d6:	62 30       	cpi	r22, 0x02	; 2
+ 1d8:	71 05       	cpc	r23, r1
+ 1da:	19 f4       	brne	.+6      	; 0x1e2 <goto_location+0xc>
+	{
+		send_command(0x80 + 64 + x -1);
+ 1dc:	81 54       	subi	r24, 0x41	; 65
+ 1de:	a6 cf       	rjmp	.-180    	; 0x12c <send_command>
+ 1e0:	08 95       	ret
+	}
+	else if (y == 1)
+ 1e2:	61 30       	cpi	r22, 0x01	; 1
+ 1e4:	71 05       	cpc	r23, r1
+ 1e6:	11 f4       	brne	.+4      	; 0x1ec <goto_location+0x16>
+	{
+		send_command(0x80 + x -1);
+ 1e8:	81 58       	subi	r24, 0x81	; 129
+ 1ea:	a0 cf       	rjmp	.-192    	; 0x12c <send_command>
+ 1ec:	08 95       	ret
+
+000001ee <copy_string>:
+2381661-.650024575D0x0D
+2370845-.6500242D1D0x0D
+!
+*/
+void copy_string(char *a,char *b,int start)
+{
+ 1ee:	fb 01       	movw	r30, r22
+ 1f0:	e4 0f       	add	r30, r20
+ 1f2:	f5 1f       	adc	r31, r21
+ 1f4:	dc 01       	movw	r26, r24
+	int c;
+	for (c = 0;c<12;c++)
+ 1f6:	20 e0       	ldi	r18, 0x00	; 0
+ 1f8:	30 e0       	ldi	r19, 0x00	; 0
+	{
+		*(a+c) = *(b+c+start);
+ 1fa:	81 91       	ld	r24, Z+
+ 1fc:	8d 93       	st	X+, r24
+!
+*/
+void copy_string(char *a,char *b,int start)
+{
+	int c;
+	for (c = 0;c<12;c++)
+ 1fe:	2f 5f       	subi	r18, 0xFF	; 255
+ 200:	3f 4f       	sbci	r19, 0xFF	; 255
+ 202:	2c 30       	cpi	r18, 0x0C	; 12
+ 204:	31 05       	cpc	r19, r1
+ 206:	c9 f7       	brne	.-14     	; 0x1fa <copy_string+0xc>
+	{
+		*(a+c) = *(b+c+start);
+	}
+}
+ 208:	08 95       	ret
+
+0000020a <compare_string>:
+int compare_string(char *a,char *b)
+{
+	int c;
+	for (c = 0;c<12;c++)
+	{
+		if (*(a+c) != *(b+c))
+ 20a:	fc 01       	movw	r30, r24
+ 20c:	30 81       	ld	r19, Z
+ 20e:	fb 01       	movw	r30, r22
+ 210:	20 81       	ld	r18, Z
+ 212:	32 13       	cpse	r19, r18
+ 214:	0f c0       	rjmp	.+30     	; 0x234 <compare_string+0x2a>
+ 216:	dc 01       	movw	r26, r24
+ 218:	11 96       	adiw	r26, 0x01	; 1
+ 21a:	31 96       	adiw	r30, 0x01	; 1
+}
+
+int compare_string(char *a,char *b)
+{
+	int c;
+	for (c = 0;c<12;c++)
+ 21c:	21 e0       	ldi	r18, 0x01	; 1
+ 21e:	30 e0       	ldi	r19, 0x00	; 0
+	{
+		if (*(a+c) != *(b+c))
+ 220:	9d 91       	ld	r25, X+
+ 222:	81 91       	ld	r24, Z+
+ 224:	98 13       	cpse	r25, r24
+ 226:	09 c0       	rjmp	.+18     	; 0x23a <compare_string+0x30>
+}
+
+int compare_string(char *a,char *b)
+{
+	int c;
+	for (c = 0;c<12;c++)
+ 228:	2f 5f       	subi	r18, 0xFF	; 255
+ 22a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 22c:	2c 30       	cpi	r18, 0x0C	; 12
+ 22e:	31 05       	cpc	r19, r1
+ 230:	b9 f7       	brne	.-18     	; 0x220 <compare_string+0x16>
+ 232:	06 c0       	rjmp	.+12     	; 0x240 <compare_string+0x36>
+	{
+		if (*(a+c) != *(b+c))
+		{
+		return 1;
+ 234:	81 e0       	ldi	r24, 0x01	; 1
+ 236:	90 e0       	ldi	r25, 0x00	; 0
+ 238:	08 95       	ret
+ 23a:	81 e0       	ldi	r24, 0x01	; 1
+ 23c:	90 e0       	ldi	r25, 0x00	; 0
+ 23e:	08 95       	ret
+		}
+	}
+	return 0;
+ 240:	80 e0       	ldi	r24, 0x00	; 0
+ 242:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 244:	08 95       	ret
+
+00000246 <check_RFID>:
+
+void check_RFID(void)
+{
+ 246:	cf 92       	push	r12
+ 248:	df 92       	push	r13
+ 24a:	ef 92       	push	r14
+ 24c:	ff 92       	push	r15
+ 24e:	0f 93       	push	r16
+ 250:	1f 93       	push	r17
+ 252:	cf 93       	push	r28
+ 254:	df 93       	push	r29
+ 256:	cd b7       	in	r28, 0x3d	; 61
+ 258:	de b7       	in	r29, 0x3e	; 62
+ 25a:	c8 54       	subi	r28, 0x48	; 72
+ 25c:	d1 09       	sbc	r29, r1
+ 25e:	0f b6       	in	r0, 0x3f	; 63
+ 260:	f8 94       	cli
+ 262:	de bf       	out	0x3e, r29	; 62
+ 264:	0f be       	out	0x3f, r0	; 63
+ 266:	cd bf       	out	0x3d, r28	; 61
+	int check,m;
+	char RFID_data_check[5][12] = 
+ 268:	8c e3       	ldi	r24, 0x3C	; 60
+ 26a:	e0 e0       	ldi	r30, 0x00	; 0
+ 26c:	f1 e0       	ldi	r31, 0x01	; 1
+ 26e:	de 01       	movw	r26, r28
+ 270:	11 96       	adiw	r26, 0x01	; 1
+ 272:	01 90       	ld	r0, Z+
+ 274:	0d 92       	st	X+, r0
+ 276:	8a 95       	dec	r24
+ 278:	e1 f7       	brne	.-8      	; 0x272 <check_RFID+0x2c>
+		{0x0A,'6','5','0','0','2','4','3','6','0','B',0X0D},
+		{0x0A,'6','5','0','0','2','4','5','7','5','D',0X0D},
+		{0x0A,'6','5','0','0','2','4','2','D','1','D',0X0D},
+	};
+	char RFID_data_check_temp[12];
+	send_command(0x01);	
+ 27a:	81 e0       	ldi	r24, 0x01	; 1
+ 27c:	57 df       	rcall	.-338    	; 0x12c <send_command>
+
+	check = 1;
+	
+	for (m=0;(check != 0) && (m < 5);m++)
+	{
+		copy_string(RFID_data_check_temp,RFID_data_check,(m)*12);
+ 27e:	40 e0       	ldi	r20, 0x00	; 0
+ 280:	50 e0       	ldi	r21, 0x00	; 0
+ 282:	be 01       	movw	r22, r28
+ 284:	6f 5f       	subi	r22, 0xFF	; 255
+ 286:	7f 4f       	sbci	r23, 0xFF	; 255
+ 288:	ce 01       	movw	r24, r28
+ 28a:	cd 96       	adiw	r24, 0x3d	; 61
+ 28c:	b0 df       	rcall	.-160    	; 0x1ee <copy_string>
+		check = compare_string(globe_RFID_data,RFID_data_check_temp);
+ 28e:	be 01       	movw	r22, r28
+ 290:	63 5c       	subi	r22, 0xC3	; 195
+ 292:	7f 4f       	sbci	r23, 0xFF	; 255
+ 294:	82 e0       	ldi	r24, 0x02	; 2
+ 296:	92 e0       	ldi	r25, 0x02	; 2
+ 298:	b8 df       	rcall	.-144    	; 0x20a <compare_string>
+ 29a:	0c e0       	ldi	r16, 0x0C	; 12
+ 29c:	10 e0       	ldi	r17, 0x00	; 0
+	char RFID_data_check_temp[12];
+	send_command(0x01);	
+
+	check = 1;
+	
+	for (m=0;(check != 0) && (m < 5);m++)
+ 29e:	c1 2c       	mov	r12, r1
+ 2a0:	d1 2c       	mov	r13, r1
+ 2a2:	18 c0       	rjmp	.+48     	; 0x2d4 <check_RFID+0x8e>
+	{
+		copy_string(RFID_data_check_temp,RFID_data_check,(m)*12);
+ 2a4:	a8 01       	movw	r20, r16
+ 2a6:	be 01       	movw	r22, r28
+ 2a8:	6f 5f       	subi	r22, 0xFF	; 255
+ 2aa:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2ac:	ce 01       	movw	r24, r28
+ 2ae:	cd 96       	adiw	r24, 0x3d	; 61
+ 2b0:	9e df       	rcall	.-196    	; 0x1ee <copy_string>
+		check = compare_string(globe_RFID_data,RFID_data_check_temp);
+ 2b2:	be 01       	movw	r22, r28
+ 2b4:	63 5c       	subi	r22, 0xC3	; 195
+ 2b6:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2b8:	82 e0       	ldi	r24, 0x02	; 2
+ 2ba:	92 e0       	ldi	r25, 0x02	; 2
+ 2bc:	a6 df       	rcall	.-180    	; 0x20a <compare_string>
+ 2be:	04 5f       	subi	r16, 0xF4	; 244
+ 2c0:	1f 4f       	sbci	r17, 0xFF	; 255
+		if ((m == 4)&&(check != 0))
+ 2c2:	24 e0       	ldi	r18, 0x04	; 4
+ 2c4:	e2 16       	cp	r14, r18
+ 2c6:	f1 04       	cpc	r15, r1
+ 2c8:	21 f4       	brne	.+8      	; 0x2d2 <check_RFID+0x8c>
+ 2ca:	89 2b       	or	r24, r25
+ 2cc:	09 f4       	brne	.+2      	; 0x2d0 <check_RFID+0x8a>
+ 2ce:	8e c0       	rjmp	.+284    	; 0x3ec <check_RFID+0x1a6>
+ 2d0:	92 c0       	rjmp	.+292    	; 0x3f6 <check_RFID+0x1b0>
+	char RFID_data_check_temp[12];
+	send_command(0x01);	
+
+	check = 1;
+	
+	for (m=0;(check != 0) && (m < 5);m++)
+ 2d2:	67 01       	movw	r12, r14
+ 2d4:	76 01       	movw	r14, r12
+ 2d6:	2f ef       	ldi	r18, 0xFF	; 255
+ 2d8:	e2 1a       	sub	r14, r18
+ 2da:	f2 0a       	sbc	r15, r18
+ 2dc:	89 2b       	or	r24, r25
+ 2de:	11 f7       	brne	.-60     	; 0x2a4 <check_RFID+0x5e>
+		{
+			m = 5;
+			break;
+		}
+	}
+	send_command(0x01);
+ 2e0:	81 e0       	ldi	r24, 0x01	; 1
+ 2e2:	24 df       	rcall	.-440    	; 0x12c <send_command>
+	
+	switch(m-1)
+ 2e4:	81 e0       	ldi	r24, 0x01	; 1
+ 2e6:	e8 1a       	sub	r14, r24
+ 2e8:	f1 08       	sbc	r15, r1
+ 2ea:	92 e0       	ldi	r25, 0x02	; 2
+ 2ec:	e9 16       	cp	r14, r25
+ 2ee:	f1 04       	cpc	r15, r1
+ 2f0:	09 f4       	brne	.+2      	; 0x2f4 <check_RFID+0xae>
+ 2f2:	37 c0       	rjmp	.+110    	; 0x362 <check_RFID+0x11c>
+ 2f4:	3c f4       	brge	.+14     	; 0x304 <check_RFID+0xbe>
+ 2f6:	e1 14       	cp	r14, r1
+ 2f8:	f1 04       	cpc	r15, r1
+ 2fa:	89 f0       	breq	.+34     	; 0x31e <check_RFID+0xd8>
+ 2fc:	ea 94       	dec	r14
+ 2fe:	ef 28       	or	r14, r15
+ 300:	f9 f0       	breq	.+62     	; 0x340 <check_RFID+0xfa>
+ 302:	6a c0       	rjmp	.+212    	; 0x3d8 <check_RFID+0x192>
+ 304:	94 e0       	ldi	r25, 0x04	; 4
+ 306:	e9 16       	cp	r14, r25
+ 308:	f1 04       	cpc	r15, r1
+ 30a:	09 f4       	brne	.+2      	; 0x30e <check_RFID+0xc8>
+ 30c:	4c c0       	rjmp	.+152    	; 0x3a6 <check_RFID+0x160>
+ 30e:	0c f4       	brge	.+2      	; 0x312 <check_RFID+0xcc>
+ 310:	39 c0       	rjmp	.+114    	; 0x384 <check_RFID+0x13e>
+ 312:	85 e0       	ldi	r24, 0x05	; 5
+ 314:	e8 16       	cp	r14, r24
+ 316:	f1 04       	cpc	r15, r1
+ 318:	09 f4       	brne	.+2      	; 0x31c <check_RFID+0xd6>
+ 31a:	56 c0       	rjmp	.+172    	; 0x3c8 <check_RFID+0x182>
+ 31c:	5d c0       	rjmp	.+186    	; 0x3d8 <check_RFID+0x192>
+	{
+		case 0 :
+		{
+			goto_location(1,1);
+ 31e:	61 e0       	ldi	r22, 0x01	; 1
+ 320:	70 e0       	ldi	r23, 0x00	; 0
+ 322:	81 e0       	ldi	r24, 0x01	; 1
+ 324:	90 e0       	ldi	r25, 0x00	; 0
+ 326:	57 df       	rcall	.-338    	; 0x1d6 <goto_location>
+			send_string("Hello Meet");
+ 328:	8c e3       	ldi	r24, 0x3C	; 60
+ 32a:	91 e0       	ldi	r25, 0x01	; 1
+ 32c:	15 df       	rcall	.-470    	; 0x158 <send_string>
+			goto_location(1,2);
+ 32e:	62 e0       	ldi	r22, 0x02	; 2
+ 330:	70 e0       	ldi	r23, 0x00	; 0
+ 332:	81 e0       	ldi	r24, 0x01	; 1
+ 334:	90 e0       	ldi	r25, 0x00	; 0
+ 336:	4f df       	rcall	.-354    	; 0x1d6 <goto_location>
+			send_string("card 1");
+ 338:	87 e4       	ldi	r24, 0x47	; 71
+ 33a:	91 e0       	ldi	r25, 0x01	; 1
+ 33c:	0d df       	rcall	.-486    	; 0x158 <send_string>
+			break;
+ 33e:	4c c0       	rjmp	.+152    	; 0x3d8 <check_RFID+0x192>
+		}
+		case 1 :
+		{
+			goto_location(1,1);
+ 340:	61 e0       	ldi	r22, 0x01	; 1
+ 342:	70 e0       	ldi	r23, 0x00	; 0
+ 344:	81 e0       	ldi	r24, 0x01	; 1
+ 346:	90 e0       	ldi	r25, 0x00	; 0
+ 348:	46 df       	rcall	.-372    	; 0x1d6 <goto_location>
+			send_string("Hello Dhruv");
+ 34a:	8e e4       	ldi	r24, 0x4E	; 78
+ 34c:	91 e0       	ldi	r25, 0x01	; 1
+ 34e:	04 df       	rcall	.-504    	; 0x158 <send_string>
+			goto_location(1,2);
+ 350:	62 e0       	ldi	r22, 0x02	; 2
+ 352:	70 e0       	ldi	r23, 0x00	; 0
+ 354:	81 e0       	ldi	r24, 0x01	; 1
+ 356:	90 e0       	ldi	r25, 0x00	; 0
+ 358:	3e df       	rcall	.-388    	; 0x1d6 <goto_location>
+			send_string("card 2");
+ 35a:	8a e5       	ldi	r24, 0x5A	; 90
+ 35c:	91 e0       	ldi	r25, 0x01	; 1
+ 35e:	fc de       	rcall	.-520    	; 0x158 <send_string>
+			break;
+ 360:	3b c0       	rjmp	.+118    	; 0x3d8 <check_RFID+0x192>
+		}
+		case 2 :
+		{
+			goto_location(1,1);
+ 362:	61 e0       	ldi	r22, 0x01	; 1
+ 364:	70 e0       	ldi	r23, 0x00	; 0
+ 366:	81 e0       	ldi	r24, 0x01	; 1
+ 368:	90 e0       	ldi	r25, 0x00	; 0
+ 36a:	35 df       	rcall	.-406    	; 0x1d6 <goto_location>
+			send_string("Hello siddarth");
+ 36c:	81 e6       	ldi	r24, 0x61	; 97
+ 36e:	91 e0       	ldi	r25, 0x01	; 1
+ 370:	f3 de       	rcall	.-538    	; 0x158 <send_string>
+			goto_location(1,2);
+ 372:	62 e0       	ldi	r22, 0x02	; 2
+ 374:	70 e0       	ldi	r23, 0x00	; 0
+ 376:	81 e0       	ldi	r24, 0x01	; 1
+ 378:	90 e0       	ldi	r25, 0x00	; 0
+ 37a:	2d df       	rcall	.-422    	; 0x1d6 <goto_location>
+			send_string("card 3");
+ 37c:	80 e7       	ldi	r24, 0x70	; 112
+ 37e:	91 e0       	ldi	r25, 0x01	; 1
+ 380:	eb de       	rcall	.-554    	; 0x158 <send_string>
+			break;
+ 382:	2a c0       	rjmp	.+84     	; 0x3d8 <check_RFID+0x192>
+		}
+		case 3 :
+		{
+			goto_location(1,1);
+ 384:	61 e0       	ldi	r22, 0x01	; 1
+ 386:	70 e0       	ldi	r23, 0x00	; 0
+ 388:	81 e0       	ldi	r24, 0x01	; 1
+ 38a:	90 e0       	ldi	r25, 0x00	; 0
+ 38c:	24 df       	rcall	.-440    	; 0x1d6 <goto_location>
+			send_string("XYZ");
+ 38e:	87 e7       	ldi	r24, 0x77	; 119
+ 390:	91 e0       	ldi	r25, 0x01	; 1
+ 392:	e2 de       	rcall	.-572    	; 0x158 <send_string>
+			goto_location(1,2);
+ 394:	62 e0       	ldi	r22, 0x02	; 2
+ 396:	70 e0       	ldi	r23, 0x00	; 0
+ 398:	81 e0       	ldi	r24, 0x01	; 1
+ 39a:	90 e0       	ldi	r25, 0x00	; 0
+ 39c:	1c df       	rcall	.-456    	; 0x1d6 <goto_location>
+			send_string("card 4");
+ 39e:	8b e7       	ldi	r24, 0x7B	; 123
+ 3a0:	91 e0       	ldi	r25, 0x01	; 1
+ 3a2:	da de       	rcall	.-588    	; 0x158 <send_string>
+			break;
+ 3a4:	19 c0       	rjmp	.+50     	; 0x3d8 <check_RFID+0x192>
+		}
+		case 4:
+		{	
+			goto_location(1,1);
+ 3a6:	61 e0       	ldi	r22, 0x01	; 1
+ 3a8:	70 e0       	ldi	r23, 0x00	; 0
+ 3aa:	81 e0       	ldi	r24, 0x01	; 1
+ 3ac:	90 e0       	ldi	r25, 0x00	; 0
+ 3ae:	13 df       	rcall	.-474    	; 0x1d6 <goto_location>
+			send_string("ABC");								
+ 3b0:	82 e8       	ldi	r24, 0x82	; 130
+ 3b2:	91 e0       	ldi	r25, 0x01	; 1
+ 3b4:	d1 de       	rcall	.-606    	; 0x158 <send_string>
+			goto_location(1,2);
+ 3b6:	62 e0       	ldi	r22, 0x02	; 2
+ 3b8:	70 e0       	ldi	r23, 0x00	; 0
+ 3ba:	81 e0       	ldi	r24, 0x01	; 1
+ 3bc:	90 e0       	ldi	r25, 0x00	; 0
+ 3be:	0b df       	rcall	.-490    	; 0x1d6 <goto_location>
+			send_string("card 5");
+ 3c0:	86 e8       	ldi	r24, 0x86	; 134
+ 3c2:	91 e0       	ldi	r25, 0x01	; 1
+ 3c4:	c9 de       	rcall	.-622    	; 0x158 <send_string>
+			break;
+ 3c6:	08 c0       	rjmp	.+16     	; 0x3d8 <check_RFID+0x192>
+		}
+		case 5:
+		{
+			goto_location(1,2);
+ 3c8:	62 e0       	ldi	r22, 0x02	; 2
+ 3ca:	70 e0       	ldi	r23, 0x00	; 0
+ 3cc:	81 e0       	ldi	r24, 0x01	; 1
+ 3ce:	90 e0       	ldi	r25, 0x00	; 0
+ 3d0:	02 df       	rcall	.-508    	; 0x1d6 <goto_location>
+			send_string("invalid card");
+ 3d2:	8d e8       	ldi	r24, 0x8D	; 141
+ 3d4:	91 e0       	ldi	r25, 0x01	; 1
+ 3d6:	c0 de       	rcall	.-640    	; 0x158 <send_string>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 3d8:	9f ef       	ldi	r25, 0xFF	; 255
+ 3da:	27 ea       	ldi	r18, 0xA7	; 167
+ 3dc:	81 e6       	ldi	r24, 0x61	; 97
+ 3de:	91 50       	subi	r25, 0x01	; 1
+ 3e0:	20 40       	sbci	r18, 0x00	; 0
+ 3e2:	80 40       	sbci	r24, 0x00	; 0
+ 3e4:	e1 f7       	brne	.-8      	; 0x3de <check_RFID+0x198>
+ 3e6:	00 c0       	rjmp	.+0      	; 0x3e8 <check_RFID+0x1a2>
+ 3e8:	00 00       	nop
+ 3ea:	08 c0       	rjmp	.+16     	; 0x3fc <check_RFID+0x1b6>
+	char RFID_data_check_temp[12];
+	send_command(0x01);	
+
+	check = 1;
+	
+	for (m=0;(check != 0) && (m < 5);m++)
+ 3ec:	76 01       	movw	r14, r12
+ 3ee:	92 e0       	ldi	r25, 0x02	; 2
+ 3f0:	e9 0e       	add	r14, r25
+ 3f2:	f1 1c       	adc	r15, r1
+ 3f4:	75 cf       	rjmp	.-278    	; 0x2e0 <check_RFID+0x9a>
+		{
+			m = 5;
+			break;
+		}
+	}
+	send_command(0x01);
+ 3f6:	81 e0       	ldi	r24, 0x01	; 1
+ 3f8:	99 de       	rcall	.-718    	; 0x12c <send_command>
+ 3fa:	d5 cf       	rjmp	.-86     	; 0x3a6 <check_RFID+0x160>
+			send_string("invalid card");
+			break;
+		}
+	}
+	_delay_ms(4000);
+}
+ 3fc:	c8 5b       	subi	r28, 0xB8	; 184
+ 3fe:	df 4f       	sbci	r29, 0xFF	; 255
+ 400:	0f b6       	in	r0, 0x3f	; 63
+ 402:	f8 94       	cli
+ 404:	de bf       	out	0x3e, r29	; 62
+ 406:	0f be       	out	0x3f, r0	; 63
+ 408:	cd bf       	out	0x3d, r28	; 61
+ 40a:	df 91       	pop	r29
+ 40c:	cf 91       	pop	r28
+ 40e:	1f 91       	pop	r17
+ 410:	0f 91       	pop	r16
+ 412:	ff 90       	pop	r15
+ 414:	ef 90       	pop	r14
+ 416:	df 90       	pop	r13
+ 418:	cf 90       	pop	r12
+ 41a:	08 95       	ret
+
+0000041c <main>:
+
+int main(void)
+{
+ 41c:	cf 93       	push	r28
+ 41e:	df 93       	push	r29
+ 420:	cd b7       	in	r28, 0x3d	; 61
+ 422:	de b7       	in	r29, 0x3e	; 62
+ 424:	2c 97       	sbiw	r28, 0x0c	; 12
+ 426:	0f b6       	in	r0, 0x3f	; 63
+ 428:	f8 94       	cli
+ 42a:	de bf       	out	0x3e, r29	; 62
+ 42c:	0f be       	out	0x3f, r0	; 63
+ 42e:	cd bf       	out	0x3d, r28	; 61
+	int n;
+	char RFID_data[12];
+	config_LCD();
+ 430:	a1 de       	rcall	.-702    	; 0x174 <config_LCD>
+	USART_Init(51,1);
+ 432:	61 e0       	ldi	r22, 0x01	; 1
+ 434:	83 e3       	ldi	r24, 0x33	; 51
+ 436:	90 e0       	ldi	r25, 0x00	; 0
+ 438:	8d d0       	rcall	.+282    	; 0x554 <USART_Init>
+	send_command(0x01);
+ 43a:	81 e0       	ldi	r24, 0x01	; 1
+ 43c:	77 de       	rcall	.-786    	; 0x12c <send_command>
+	goto_location(1,1);
+ 43e:	61 e0       	ldi	r22, 0x01	; 1
+ 440:	70 e0       	ldi	r23, 0x00	; 0
+ 442:	81 e0       	ldi	r24, 0x01	; 1
+ 444:	90 e0       	ldi	r25, 0x00	; 0
+ 446:	c7 de       	rcall	.-626    	; 0x1d6 <goto_location>
+	send_string(" **** HELLO ****");
+ 448:	8a e9       	ldi	r24, 0x9A	; 154
+ 44a:	91 e0       	ldi	r25, 0x01	; 1
+ 44c:	85 de       	rcall	.-758    	; 0x158 <send_string>
+	goto_location(1,2);
+ 44e:	62 e0       	ldi	r22, 0x02	; 2
+ 450:	70 e0       	ldi	r23, 0x00	; 0
+ 452:	81 e0       	ldi	r24, 0x01	; 1
+ 454:	90 e0       	ldi	r25, 0x00	; 0
+ 456:	bf de       	rcall	.-642    	; 0x1d6 <goto_location>
+	send_string("RFID CARD READER");
+ 458:	8b ea       	ldi	r24, 0xAB	; 171
+ 45a:	91 e0       	ldi	r25, 0x01	; 1
+ 45c:	7d de       	rcall	.-774    	; 0x158 <send_string>
+ 45e:	2f ef       	ldi	r18, 0xFF	; 255
+ 460:	83 ed       	ldi	r24, 0xD3	; 211
+ 462:	90 e3       	ldi	r25, 0x30	; 48
+ 464:	21 50       	subi	r18, 0x01	; 1
+ 466:	80 40       	sbci	r24, 0x00	; 0
+ 468:	90 40       	sbci	r25, 0x00	; 0
+ 46a:	e1 f7       	brne	.-8      	; 0x464 <main+0x48>
+ 46c:	00 c0       	rjmp	.+0      	; 0x46e <main+0x52>
+ 46e:	00 00       	nop
+	_delay_ms(2000);
+	send_command(0x01);
+ 470:	81 e0       	ldi	r24, 0x01	; 1
+ 472:	5c de       	rcall	.-840    	; 0x12c <send_command>
+	goto_location(1,1);
+ 474:	61 e0       	ldi	r22, 0x01	; 1
+ 476:	70 e0       	ldi	r23, 0x00	; 0
+ 478:	81 e0       	ldi	r24, 0x01	; 1
+ 47a:	90 e0       	ldi	r25, 0x00	; 0
+ 47c:	ac de       	rcall	.-680    	; 0x1d6 <goto_location>
+	send_string("MAKERSPACE 2017");
+ 47e:	8c eb       	ldi	r24, 0xBC	; 188
+ 480:	91 e0       	ldi	r25, 0x01	; 1
+ 482:	6a de       	rcall	.-812    	; 0x158 <send_string>
+	goto_location(1,2);
+ 484:	62 e0       	ldi	r22, 0x02	; 2
+ 486:	70 e0       	ldi	r23, 0x00	; 0
+ 488:	81 e0       	ldi	r24, 0x01	; 1
+ 48a:	90 e0       	ldi	r25, 0x00	; 0
+ 48c:	a4 de       	rcall	.-696    	; 0x1d6 <goto_location>
+	send_string(" **WELCOME**");
+ 48e:	8c ec       	ldi	r24, 0xCC	; 204
+ 490:	91 e0       	ldi	r25, 0x01	; 1
+ 492:	62 de       	rcall	.-828    	; 0x158 <send_string>
+ 494:	ef ef       	ldi	r30, 0xFF	; 255
+ 496:	f3 ed       	ldi	r31, 0xD3	; 211
+ 498:	20 e3       	ldi	r18, 0x30	; 48
+ 49a:	e1 50       	subi	r30, 0x01	; 1
+ 49c:	f0 40       	sbci	r31, 0x00	; 0
+ 49e:	20 40       	sbci	r18, 0x00	; 0
+ 4a0:	e1 f7       	brne	.-8      	; 0x49a <main+0x7e>
+ 4a2:	00 c0       	rjmp	.+0      	; 0x4a4 <main+0x88>
+ 4a4:	00 00       	nop
+	send_command(0X01);
+	goto_location(1,1);
+	send_string("Please Place the");
+	goto_location(1,2);
+	send_string("RFID card");
+	UCSR1B|=(1<<RXEN1);
+ 4a6:	0f 2e       	mov	r0, r31
+ 4a8:	fa e9       	ldi	r31, 0x9A	; 154
+ 4aa:	cf 2e       	mov	r12, r31
+ 4ac:	d1 2c       	mov	r13, r1
+ 4ae:	f0 2d       	mov	r31, r0
+ 4b0:	7e 01       	movw	r14, r28
+ 4b2:	8d e0       	ldi	r24, 0x0D	; 13
+ 4b4:	e8 0e       	add	r14, r24
+ 4b6:	f1 1c       	adc	r15, r1
+	goto_location(1,2);
+	send_string(" **WELCOME**");
+	_delay_ms(2000);
+	while(1)
+	{
+	send_command(0X01);
+ 4b8:	81 e0       	ldi	r24, 0x01	; 1
+ 4ba:	38 de       	rcall	.-912    	; 0x12c <send_command>
+	goto_location(1,1);
+ 4bc:	61 e0       	ldi	r22, 0x01	; 1
+ 4be:	70 e0       	ldi	r23, 0x00	; 0
+ 4c0:	81 e0       	ldi	r24, 0x01	; 1
+ 4c2:	90 e0       	ldi	r25, 0x00	; 0
+ 4c4:	88 de       	rcall	.-752    	; 0x1d6 <goto_location>
+	send_string("Please Place the");
+ 4c6:	89 ed       	ldi	r24, 0xD9	; 217
+ 4c8:	91 e0       	ldi	r25, 0x01	; 1
+ 4ca:	46 de       	rcall	.-884    	; 0x158 <send_string>
+	goto_location(1,2);
+ 4cc:	62 e0       	ldi	r22, 0x02	; 2
+ 4ce:	70 e0       	ldi	r23, 0x00	; 0
+ 4d0:	81 e0       	ldi	r24, 0x01	; 1
+ 4d2:	90 e0       	ldi	r25, 0x00	; 0
+ 4d4:	80 de       	rcall	.-768    	; 0x1d6 <goto_location>
+	send_string("RFID card");
+ 4d6:	8a ee       	ldi	r24, 0xEA	; 234
+ 4d8:	91 e0       	ldi	r25, 0x01	; 1
+ 4da:	3e de       	rcall	.-900    	; 0x158 <send_string>
+	UCSR1B|=(1<<RXEN1);
+ 4dc:	f6 01       	movw	r30, r12
+ 4de:	80 81       	ld	r24, Z
+ 4e0:	80 61       	ori	r24, 0x10	; 16
+ 4e2:	80 83       	st	Z, r24
+	UCSR1B&=~(1<<RXEN1);
+ 4e4:	80 81       	ld	r24, Z
+ 4e6:	8f 7e       	andi	r24, 0xEF	; 239
+ 4e8:	80 83       	st	Z, r24
+	UCSR1B|=(1<<RXEN1);
+ 4ea:	80 81       	ld	r24, Z
+ 4ec:	80 61       	ori	r24, 0x10	; 16
+ 4ee:	80 83       	st	Z, r24
+ 4f0:	8e 01       	movw	r16, r28
+ 4f2:	0f 5f       	subi	r16, 0xFF	; 255
+ 4f4:	1f 4f       	sbci	r17, 0xFF	; 255
+	for(n=0;n<12;n++)
+	{
+		RFID_data[n] = USART_Receive(1);
+ 4f6:	81 e0       	ldi	r24, 0x01	; 1
+ 4f8:	4b d0       	rcall	.+150    	; 0x590 <USART_Receive>
+ 4fa:	f8 01       	movw	r30, r16
+ 4fc:	81 93       	st	Z+, r24
+ 4fe:	8f 01       	movw	r16, r30
+	goto_location(1,2);
+	send_string("RFID card");
+	UCSR1B|=(1<<RXEN1);
+	UCSR1B&=~(1<<RXEN1);
+	UCSR1B|=(1<<RXEN1);
+	for(n=0;n<12;n++)
+ 500:	ee 15       	cp	r30, r14
+ 502:	ff 05       	cpc	r31, r15
+ 504:	c1 f7       	brne	.-16     	; 0x4f6 <main+0xda>
+	{
+		RFID_data[n] = USART_Receive(1);
+	}
+	UCSR1B&=~(1<<RXEN1);
+ 506:	f6 01       	movw	r30, r12
+ 508:	80 81       	ld	r24, Z
+ 50a:	8f 7e       	andi	r24, 0xEF	; 239
+ 50c:	80 83       	st	Z, r24
+	send_command(0x01);
+ 50e:	81 e0       	ldi	r24, 0x01	; 1
+ 510:	0d de       	rcall	.-998    	; 0x12c <send_command>
+	goto_location(1,1);
+ 512:	61 e0       	ldi	r22, 0x01	; 1
+ 514:	70 e0       	ldi	r23, 0x00	; 0
+ 516:	81 e0       	ldi	r24, 0x01	; 1
+ 518:	90 e0       	ldi	r25, 0x00	; 0
+ 51a:	5d de       	rcall	.-838    	; 0x1d6 <goto_location>
+	send_string("CARD ID is :-");
+ 51c:	84 ef       	ldi	r24, 0xF4	; 244
+ 51e:	91 e0       	ldi	r25, 0x01	; 1
+ 520:	1b de       	rcall	.-970    	; 0x158 <send_string>
+	goto_location(1,2);
+ 522:	62 e0       	ldi	r22, 0x02	; 2
+ 524:	70 e0       	ldi	r23, 0x00	; 0
+ 526:	81 e0       	ldi	r24, 0x01	; 1
+ 528:	90 e0       	ldi	r25, 0x00	; 0
+ 52a:	55 de       	rcall	.-854    	; 0x1d6 <goto_location>
+	send_string(RFID_data);
+ 52c:	ce 01       	movw	r24, r28
+ 52e:	01 96       	adiw	r24, 0x01	; 1
+ 530:	13 de       	rcall	.-986    	; 0x158 <send_string>
+	strcpy(globe_RFID_data,RFID_data);
+ 532:	be 01       	movw	r22, r28
+ 534:	6f 5f       	subi	r22, 0xFF	; 255
+ 536:	7f 4f       	sbci	r23, 0xFF	; 255
+ 538:	82 e0       	ldi	r24, 0x02	; 2
+ 53a:	92 e0       	ldi	r25, 0x02	; 2
+ 53c:	37 d0       	rcall	.+110    	; 0x5ac <strcpy>
+ 53e:	ff ef       	ldi	r31, 0xFF	; 255
+ 540:	23 ed       	ldi	r18, 0xD3	; 211
+ 542:	80 e3       	ldi	r24, 0x30	; 48
+ 544:	f1 50       	subi	r31, 0x01	; 1
+ 546:	20 40       	sbci	r18, 0x00	; 0
+ 548:	80 40       	sbci	r24, 0x00	; 0
+ 54a:	e1 f7       	brne	.-8      	; 0x544 <main+0x128>
+ 54c:	00 c0       	rjmp	.+0      	; 0x54e <main+0x132>
+ 54e:	00 00       	nop
+	_delay_ms(2000);
+	check_RFID();
+ 550:	7a de       	rcall	.-780    	; 0x246 <check_RFID>
+	}
+ 552:	b2 cf       	rjmp	.-156    	; 0x4b8 <main+0x9c>
+
+00000554 <USART_Init>:
+		while ( !( UCSR1A & (1<<UDRE1)) );
+		UDR1=data;
+	}else
+	{
+		while ( !( UCSR0A & (1<<UDRE0)) );
+		UDR0=data;
+ 554:	78 94       	sei
+ 556:	66 23       	and	r22, r22
+ 558:	79 f0       	breq	.+30     	; 0x578 <USART_Init+0x24>
+ 55a:	90 93 98 00 	sts	0x0098, r25
+ 55e:	80 93 99 00 	sts	0x0099, r24
+ 562:	ea e9       	ldi	r30, 0x9A	; 154
+ 564:	f0 e0       	ldi	r31, 0x00	; 0
+ 566:	80 81       	ld	r24, Z
+ 568:	88 61       	ori	r24, 0x18	; 24
+ 56a:	80 83       	st	Z, r24
+ 56c:	ed e9       	ldi	r30, 0x9D	; 157
+ 56e:	f0 e0       	ldi	r31, 0x00	; 0
+ 570:	80 81       	ld	r24, Z
+ 572:	86 60       	ori	r24, 0x06	; 6
+ 574:	80 83       	st	Z, r24
+ 576:	08 95       	ret
+ 578:	90 93 90 00 	sts	0x0090, r25
+ 57c:	89 b9       	out	0x09, r24	; 9
+ 57e:	8a b1       	in	r24, 0x0a	; 10
+ 580:	88 61       	ori	r24, 0x18	; 24
+ 582:	8a b9       	out	0x0a, r24	; 10
+ 584:	e5 e9       	ldi	r30, 0x95	; 149
+ 586:	f0 e0       	ldi	r31, 0x00	; 0
+ 588:	80 81       	ld	r24, Z
+ 58a:	86 60       	ori	r24, 0x06	; 6
+ 58c:	80 83       	st	Z, r24
+ 58e:	08 95       	ret
+
+00000590 <USART_Receive>:
+	}
+}
+
+unsigned char USART_Receive(uint8_t n )
+{
+	if(n)
+ 590:	88 23       	and	r24, r24
+ 592:	41 f0       	breq	.+16     	; 0x5a4 <USART_Receive+0x14>
+	{
+		while (! (UCSR1A & (1 << RXC1)) );
+ 594:	eb e9       	ldi	r30, 0x9B	; 155
+ 596:	f0 e0       	ldi	r31, 0x00	; 0
+ 598:	80 81       	ld	r24, Z
+ 59a:	88 23       	and	r24, r24
+ 59c:	ec f7       	brge	.-6      	; 0x598 <USART_Receive+0x8>
+    	return UDR1;
+ 59e:	80 91 9c 00 	lds	r24, 0x009C
+ 5a2:	08 95       	ret
+	}else 
+	{
+		while (! (UCSR0A & (1 << RXC0)) );
+ 5a4:	5f 9b       	sbis	0x0b, 7	; 11
+ 5a6:	fe cf       	rjmp	.-4      	; 0x5a4 <USART_Receive+0x14>
+    	return UDR0;
+ 5a8:	8c b1       	in	r24, 0x0c	; 12
+	}
+}
+ 5aa:	08 95       	ret
+
+000005ac <strcpy>:
+ 5ac:	fb 01       	movw	r30, r22
+ 5ae:	dc 01       	movw	r26, r24
+ 5b0:	01 90       	ld	r0, Z+
+ 5b2:	0d 92       	st	X+, r0
+ 5b4:	00 20       	and	r0, r0
+ 5b6:	e1 f7       	brne	.-8      	; 0x5b0 <strcpy+0x4>
+ 5b8:	08 95       	ret
+
+000005ba <_exit>:
+ 5ba:	f8 94       	cli
+
+000005bc <__stop_program>:
+ 5bc:	ff cf       	rjmp	.-2      	; 0x5bc <__stop_program>
